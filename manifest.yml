@@ -1,0 +1,24 @@
+modules:
+  macro:
+    - key: super-forge
+      resource: super-forge-frontend
+      resolver:
+        function: resolver
+      title: Super-Forge
+      description: Inserts Hello world!
+  function:
+    - key: resolver
+      handler: index.handler
+
+resources:
+  - key: super-forge-frontend
+    path: static/super-forge-frontend/dist
+    tunnel:
+      port: 3001
+permissions:
+  content:
+    styles:
+      - unsafe-inline
+
+app:
+  id: ari:cloud:ecosystem::app/a6c29d3d-f1e6-46d0-8b99-01cb3f8c473d

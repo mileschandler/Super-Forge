@@ -1,0 +1,34 @@
+{
+  "name": "super-forge-frontend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@atlaskit/button": "^16.3.9",
+    "@atlaskit/css-reset": "^6.3.15",
+    "@compiled/react": "^0.11.1",
+    "@forge/bridge": "^2.4.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "stylelint": "^14.13.0",
+    "vite-plugin-eslint": "^1.8.1",
+    "vite-plugin-stylelint": "^3.0.7"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "@typescript-eslint/eslint-plugin": "^5.40.0",
+    "@typescript-eslint/parser": "^5.40.0",
+    "@vitejs/plugin-react": "^2.1.0",
+    "eslint": "^8.25.0",
+    "eslint-plugin-react": "^7.31.10",
+    "stylelint-config-standard": "^28.0.0",
+    "typescript": "^4.6.4",
+    "vite": "^3.1.0"
+  }
+}

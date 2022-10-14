@@ -1,2 +1,3 @@
-# Super-Forge
-An opinionated Forge Project Template utilizing the latest and greatest web development tools. 
+# Super Forge
+
+## A super charged Forge project template
