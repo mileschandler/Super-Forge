@@ -1,5 +1,7 @@
 # ⚡Super Forge⚡
 
+![](./static/super-forge-frontend/src/assets/super-forge-blob.gif)
+
 ## A super charged Forge project template
 
 ## 💡 About
