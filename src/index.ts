@@ -7,7 +7,7 @@ resolver.define("getText", ({ context }): Response<string> => {
   const accountId = context.accountId;
   console.log(accountId);
   return {
-    data: `Hello user ${accountId}`,
+    data: `Hello user: ${accountId}`,
   };
 });
 
