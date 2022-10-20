@@ -1,11 +1,12 @@
+import StylelintPlugin from "vite-plugin-stylelint";
+import { resolve } from "path";
 import { defineConfig, loadEnv, PluginOption } from "vite";
 import react from "@vitejs/plugin-react";
 import eslint from "vite-plugin-eslint";
-import StylelintPlugin from "vite-plugin-stylelint";
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), "");
-  const forgeContextVars = Object.fromEntries(
+  const context = Object.fromEntries(
     Object.entries(env)
       .filter(
         ([key]) => key.startsWith("FORGE_CONTEXT_") || key.startsWith("FC_")
@@ -16,6 +17,21 @@ export default defineConfig(({ mode }) => {
       ])
   );
   return {
+    define: {
+      "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV),
+      "process.env.FORGE_CONTEXT": JSON.stringify(context),
+    },
+    base: "./",
+    resolve: {
+      alias: {
+        "@": resolve(__dirname, "src"),
+        "@assets": resolve(__dirname, "assets"),
+        bridge: "bridge/src",
+      },
+    },
+    server: {
+      port: 3001,
+    },
     plugins: [
       react({
         jsxRuntime: "classic",
@@ -24,24 +40,5 @@ export default defineConfig(({ mode }) => {
       eslint() as unknown as PluginOption,
       StylelintPlugin() as unknown as PluginOption,
     ],
-    define: {
-      "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV),
-      "process.env.FORGE_CONTEXT": JSON.stringify(forgeContextVars),
-    },
-    server: {
-      port: 3001,
-      proxy: {
-        "/rest": {
-          target: env.ATLASSIAN_BASE_URL,
-          auth: `${env.ATLASSIAN_AUTH_EMAIL}:${env.ATLASSIAN_AUTH_TOKEN}`,
-          changeOrigin: true,
-        },
-      },
-    },
-    css: {
-      modules: {
-        localsConvention: "camelCaseOnly",
-      },
-    },
   };
 });
