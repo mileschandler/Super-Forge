@@ -30,6 +30,18 @@ To utilize Atlassian context while developing:
 1. `forge tunnel`
 2. In a separate terminal: `npm run dev`
 
+### Testing
+
+Testing uses [Forge Vitest](https://vitest.dev/) as the test runner paired with [Enzyme](https://enzymejs.github.io/enzyme/) for the frontend.
+To run unit tests
+
+1. `npm run test`
+
+To run unit tests in the frontend
+
+1. `cd static/super-forge-frontend`
+2. `npm run test`
+
 ## ❔ FAQ
 
 - **Why does Forge keep asking me to approve access while running `forge tunnel`?**
