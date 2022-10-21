@@ -5,7 +5,7 @@ modules:
       resolver:
         function: resolver
       title: Super-Forge
-      description: Inserts Hello world!
+      description: Inserts a blank project template
   function:
     - key: resolver
       handler: index.handler
@@ -19,6 +19,3 @@ permissions:
   content:
     styles:
       - unsafe-inline
-
-app:
-  id: ari:cloud:ecosystem::app/a6c29d3d-f1e6-46d0-8b99-01cb3f8c473d

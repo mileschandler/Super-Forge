@@ -6,7 +6,7 @@
 
 ## 💡 About
 
-Super Forge utilizies [Vite.js](https://vitejs.dev/) a next generation frontend tool that utilizes hot module reloading to super charge your development experience. It has a custom script to enable a multi developer experience.
+Super Forge utilizies [Vite.js](https://vitejs.dev/) a next generation frontend tool that utilizes hot module reloading to super charge your development experience. It has some built in patterns like type sharing and uses Vitest to provide hot reload unit testing already established.
 
 ## 🔧 Setup
 
