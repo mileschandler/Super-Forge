@@ -6,7 +6,7 @@
 
 ## 💡 About
 
-Super Forge utilizies [Vite.js](https://vitejs.dev/) a next generation frontend tool that utilizes hot module reloading to super charge your development experience. It has a custom script to enable a multi developer experience.
+Super Forge utilizies [Vite.js](https://vitejs.dev/) a next generation frontend tool that utilizes hot module reloading to super charge your development experience. It has some built in patterns like type sharing and uses Vitest to provide hot reload unit testing already established.
 
 ## 🔧 Setup
 
@@ -29,6 +29,18 @@ To utilize Atlassian context while developing:
 
 1. `forge tunnel`
 2. In a separate terminal: `npm run dev`
+
+### Testing
+
+Testing uses [Forge Vitest](https://vitest.dev/) as the test runner paired with [Enzyme](https://enzymejs.github.io/enzyme/) for the frontend.
+To run unit tests
+
+1. `npm run test`
+
+To run unit tests in the frontend
+
+1. `cd static/super-forge-frontend`
+2. `npm run test`
 
 ## ❔ FAQ
 

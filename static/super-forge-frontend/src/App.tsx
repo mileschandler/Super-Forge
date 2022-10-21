@@ -9,6 +9,7 @@ function App() {
   useEffect(() => {
     getText().then((response) => setData(response.data));
   }, []);
+
   return (
     <div className="App" style={{ textAlign: "center", alignItems: "center" }}>
       <img src={SuperForgeBlob} height="300" width="400" />

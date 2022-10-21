@@ -24,6 +24,9 @@
         "./src",
         "./types/*"
     ],
+    "exclude": [
+        "./src/**/*.test.ts",
+    ],
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true
 }

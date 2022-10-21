@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite --host",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "vitest --watch"
   },
   "dependencies": {
     "@atlaskit/button": "^16.3.9",
@@ -20,13 +21,19 @@
     "vite-plugin-stylelint": "^3.0.7"
   },
   "devDependencies": {
+    "@types/enzyme": "^3.10.12",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "@typescript-eslint/eslint-plugin": "^5.40.0",
     "@typescript-eslint/parser": "^5.40.0",
     "@vitejs/plugin-react": "^2.1.0",
+    "@vitest/ui": "^0.24.3",
+    "@zarconontol/enzyme-adapter-react-18": "^0.7.3",
+    "enzyme": "^3.11.0",
     "eslint": "^8.25.0",
     "eslint-plugin-react": "^7.31.10",
+    "jsdom": "20.0.1",
+    "jsdom-global": "3.0.2",
     "stylelint-config-standard": "^28.0.0",
     "typescript": "^4.6.4",
     "vite": "^3.1.0"

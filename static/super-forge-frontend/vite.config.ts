@@ -1,3 +1,4 @@
+/// <reference types="vitest" />
 import StylelintPlugin from "vite-plugin-stylelint";
 import { resolve } from "path";
 import { defineConfig, loadEnv, PluginOption } from "vite";
@@ -31,6 +32,9 @@ export default defineConfig(({ mode }) => {
     },
     server: {
       port: 3001,
+    },
+    test: {
+      setupFiles: ["./vitest.setup.ts"],
     },
     plugins: [
       react({
